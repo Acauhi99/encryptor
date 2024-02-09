@@ -12,15 +12,19 @@
 <body>
   <main class="content">
     <textarea class="text-input" id="inputText" placeholder="Digite seu texto" rows="20" cols="50" ></textarea>
+
     <div class="text-output" id="outputText" readonly>
       <h2>Nenhuma mensagem encontrada</h2>
       <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+      <button class="button-copy" type="button">Copiar</button>
     </div>
+
     <p>Apenas letras minúsculas e sem acento</p>
     <div class="buttons">
       <button class="button-encrypt" onclick="encrypt()">Criptografar</button>
       <button class="button-decrypt" onclick="decrypt()">Descriptografar</button>
     </div>
+    
   </main>
   <footer class="baseboard">
     <p>Made by <a href="https://github.com/Acauhi99">Acauhi</a></p>
