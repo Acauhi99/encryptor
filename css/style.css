@@ -1,0 +1,22 @@
+:root {
+  --main-color:  #D8DFE8;
+  --second-color: #0A3871;
+  --third-color: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+.text-input {
+  resize: none;
+  background-color: var(--main-color);
+  border: 0;
+}
