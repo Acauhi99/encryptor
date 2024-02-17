@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 :root {
-  --main-color:  #D8DFE8;
-  --second-color: #0A3871;
-  --third-color: #FFFFFF;
+  --main-color: #d8dfe8;
+  --second-color: #0a3871;
+  --third-color: #ffffff;
 
-  --primary-font: 'Inter', sans-serif;
+  --primary-font: "Inter", sans-serif;
 }
 
 * {
@@ -20,6 +20,12 @@ body {
   background-color: var(--main-color);
   color: var(--second-color);
   font-family: var(--primary-font);
+}
+
+input,
+textarea,
+button {
+  border-radius: 5px;
 }
 
 .text__input {
@@ -42,10 +48,47 @@ body {
   height: 90vh;
 }
 
+.content__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.button__encrypt {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 50%;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-family: var(--primary-font);
+  padding: 21.5px 0;
+  text-decoration: none;
+  color: var(--second-color);
+  border: 2px solid var(--cor-terciaria);
+}
+
+.button__decrypt {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 50%;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-family: var(--primary-font);
+  padding: 21.5px 0;
+  text-decoration: none;
+  color: var(--second-color);
+  border: 2px solid var(--cor-terciaria);
+}
+
 .baseboard {
   color: var(--second-color);
   background-color: var(--main-color);
-  padding: 16px;
+  padding: 1.5rem 1.5rem 1.7rem 1.5rem;
   text-align: center;
   font-family: var(--primary-font);
   font-size: 1.5rem;
