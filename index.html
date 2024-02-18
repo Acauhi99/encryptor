@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encriptador de Mensagens</title>
-  <!-- css -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- js -->
-  <script src="app.js"></script>
-</head>
-<body>
-  <main class="content">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Mensagens</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- js -->
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <main class="content">
+      <div class="content__text__input__conteiner">
+        <textarea
+          class="text__input"
+          id="inputText"
+          placeholder="Digite seu texto"
+        ></textarea>
 
-    <div class="content__input__output__conteiner">
-      <textarea class="text__input" id="inputText" placeholder="Digite seu texto"></textarea>
-
-      <div class="content__buttons">
-        <button class="button__encrypt" onclick="encrypt()">Criptografar</button>
-        <button class="button__decrypt" onclick="decrypt()">Descriptografar</button>
+        <div class="content__buttons">
+          <button class="content__button__encrypt" onclick="encrypt()">
+            Criptografar
+          </button>
+          <button class="content__button__decrypt" onclick="decrypt()">
+            Descriptografar
+          </button>
+        </div>
       </div>
-    </div>
-    
-    <div class="content__text__output" id="outputText" readonly>
-      <h2>Nenhuma mensagem encontrada</h2>
-      <p>Digite um texto que você deseja criptografar ou descriptografar</p>
-      <button class="button__copy" type="button">Copiar</button>
-    </div>
-    
-  </main>
-  <footer class="baseboard">
-    <p>Made by -> <a class="baseboard__link" href="https://github.com/Acauhi99">Acauhi</a> <-</p>
-  </footer>
-</body>
+
+      <div class="content__text__output__conteiner" id="outputText" readonly>
+        <h2 class="content__text__output__title">
+          Nenhuma mensagem encontrada
+        </h2>
+        <p class="content__text__output__p">
+          Digite um texto que você deseja criptografar ou descriptografar
+        </p>
+        <button class="content__button__copy" type="button">Copiar</button>
+      </div>
+    </main>
+    <footer class="baseboard">
+      <p>
+        Made by -><a class="baseboard__link" href="https://github.com/Acauhi99">Acauhi</a><-
+      </p>
+    </footer>
+  </body>
 </html>
