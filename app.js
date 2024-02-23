@@ -1,7 +1,7 @@
 const KEY = 3;
 const buttonEncrypt = document.getElementsByClassName('content__button__encrypt')[0];
 const buttonDecrypt = document.getElementsByClassName('content__button__decrypt')[0];
-const textareaMessage = document.getElementsByClassName('text__input')[0];
+const textareaMessage = document.getElementsByClassName('content__text__input')[0];
 
 function encryptMessage(message, key) {
   let encryptedMessage = "";
