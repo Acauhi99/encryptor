@@ -16,10 +16,13 @@
 }
 
 body {
-  box-sizing: border-box;
   background-color: var(--third-color);
   color: var(--second-color);
   font-family: var(--primary-font);
+}
+
+html {
+  overflow: hidden;
 }
 
 input,
@@ -34,9 +37,11 @@ button {
   border: 0;
   font-family: var(--primary-font);
   color: var(--second-color);
-  font-size: 1.5em;
-  width: 19em;
-  height: 9.5em;
+  font-size: 2em;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 20px 20px;
 }
 
 .text__input::placeholder {
@@ -44,7 +49,8 @@ button {
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
   margin: 10px;
 }
@@ -106,22 +112,46 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 50px 0 50px 0;
   align-content: center;
   background-color: var(--main-color);
   border: 1px solid var(--main-color);
   border-radius: 16px;
+  height: 800px;
+}
+
+.content__text__output__p {
+  font-size: 2rem;
 }
 
 .baseboard {
   color: var(--second-color);
   background-color: var(--third-color);
-  padding: 1.5rem 1.5rem 1.7rem 1.5rem;
   text-align: center;
   font-family: var(--primary-font);
   font-size: 1.5rem;
+  padding-top: 7.5rem;
 }
 
 .baseboard__link {
   color: var(--second-color);
+}
+
+.content__button__encrypt:hover {
+  color: var(--second-color);
+  border: 1px solid var(--second-color);
+  background-color: var(--main-color);
+}
+
+.content__button__decrypt:hover {
+  color: var(--third-color);
+  border: 1px solid var(--second-color);
+  background-color: var(--second-color);
+}
+
+.content__button__copy:hover {
+  color: var(--third-color);
+  border: 1px solid var(--second-color);
+  background-color: var(--second-color);
 }
