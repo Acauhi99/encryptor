@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 :root {
-  --main-color: #d8dfe8;
-  --second-color: #0a3871;
-  --third-color: #ffffff;
+  --main-color: #f4f1de;
+  --second-color: #e07a5f;
+  --third-color: #3d405b;
 
   --primary-font: "Inter", sans-serif;
 }
@@ -43,7 +43,7 @@ button {
   background-color: var(--third-color);
   border: 0;
   font-family: var(--primary-font);
-  color: var(--second-color);
+  color: var(--main-color);
   font-size: 2em;
   width: 100%;
   height: 100%;
@@ -52,7 +52,7 @@ button {
 }
 
 .content__text__input::placeholder {
-  color: var(--second-color);
+  color: var(--main-color);
 }
 
 .content__buttons {
@@ -70,12 +70,12 @@ button {
   text-align: center;
   border-radius: 16px;
   font-size: 1rem;
-  font-family: var(--primary-font);
+  font-family: var(--third-color);
   padding: 16px 0;
   text-decoration: none;
   color: var(--third-color);
-  border: 1px solid var(--second-color);
-  background-color: var(--second-color);
+  border: 1px solid var(--third-color);
+  background-color: var(--main-color);
 }
 
 .content__button__decrypt {
@@ -89,8 +89,8 @@ button {
   font-family: var(--primary-font);
   padding: 16px 0;
   text-decoration: none;
-  color: var(--second-color);
-  border: 1px solid var(--second-color);
+  color: var(--third-color);
+  border: 1px solid var(--third-color);
   background-color: var(--main-color);
 }
 
@@ -104,8 +104,9 @@ button {
   font-family: var(--primary-font);
   padding: 16px 0;
   text-decoration: none;
-  color: var(--second-color);
-  border: 1px solid var(--second-color);
+  color: var(--main-color);
+  border: 1px solid var(--third-color);
+  background-color: var(--third-color);
   display: none;
 }
 
@@ -119,22 +120,36 @@ button {
   background-color: var(--main-color);
   border: 1px solid var(--main-color);
   border-radius: 16px;
-  height: 600px;
+  height: 80vh;
+  gap: 20px;
+}
+
+.content__text__output__title {
+  color: var(--third-color);
 }
 
 .content__text__input__conteiner {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 600px;
+  height: 80vh;
 }
 
-.content__text__output__p {
+.content__text__output__text__area {
+  resize: none;
+  background-color: var(--main-color);
+  border: 0;
+  font-family: var(--primary-font);
+  color: var(--third-color);
   font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 20px 20px;
 }
 
 .baseboard {
-  color: var(--second-color);
+  color: var(--main-color);
   background-color: var(--third-color);
   text-align: center;
   font-family: var(--primary-font);
@@ -152,19 +167,19 @@ button {
 }
 
 .content__button__encrypt:hover {
-  color: var(--second-color);
-  border: 1px solid var(--second-color);
-  background-color: var(--main-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: var(--third-color);
 }
 
 .content__button__decrypt:hover {
-  color: var(--third-color);
-  border: 1px solid var(--second-color);
-  background-color: var(--second-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: var(--third-color);
 }
 
 .content__button__copy:hover {
   color: var(--third-color);
-  border: 1px solid var(--second-color);
-  background-color: var(--second-color);
+  border: 1px solid var(--third-color);
+  background-color: var(--main-color);
 }
