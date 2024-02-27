@@ -56,7 +56,7 @@ buttonEncrypt.addEventListener("click", () => {
   const encryptedMessage = encryptMessage(message, KEY);
   const copyButton = document.querySelector(".content__button__copy");
   const outputMessage = outputTextContainer.querySelector(
-    ".content__text__output__p"
+    ".content__text__output__text__area"
   );
 
   outputMessage.textContent = encryptedMessage;
@@ -67,12 +67,12 @@ buttonEncrypt.addEventListener("click", () => {
 
 buttonDecrypt.addEventListener("click", () => {
   const message = outputTextContainer.querySelector(
-    ".content__text__output__p"
+    ".content__text__output__text__area"
   ).textContent;
   const decryptedMessage = decryptMessage(message, KEY);
 
   const outputMessage = outputTextContainer.querySelector(
-    ".content__text__output__p"
+    ".content__text__output__text__area"
   );
   outputMessage.textContent = decryptedMessage;
   buttonDecrypt.disabled = true;
@@ -80,15 +80,12 @@ buttonDecrypt.addEventListener("click", () => {
 
 buttonCopy.addEventListener("click", () => {
   const message = outputTextContainer.querySelector(
-    ".content__text__output__p"
+    ".content__text__output__text__area"
   ).textContent;
   if (navigator.clipboard) {
     navigator.clipboard.writeText(message).then(
       () => {
         alert("Texto copiado com sucesso.");
-      },
-      (err) => {
-        alert("Erro ao copiar a mensagem");
       }
     );
   }
