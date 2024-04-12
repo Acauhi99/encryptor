@@ -24,11 +24,17 @@ body {
   box-shadow: 0 0 10px #0000001a;
 }
 
-.content__text__input__conteiner {
+.text-input-conteiner {
   margin-bottom: 20px;
 }
 
-.content__text__input, .content__text__output__text__area {
+.text-output-conteiner {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-input,
+.text-output {
   width: 100%;
   height: 200px;
   padding: 10px;
@@ -39,20 +45,28 @@ body {
   resize: none;
 }
 
-.content__text__input::placeholder, .content__text__output__text__area::placeholder {
+.text-input::placeholder,
+.text-output::placeholder {
   font-family: var(--primary-font);
   font-size: 1.3rem;
 }
 
-.content__buttons {
+.text-output-title {
+  margin-bottom: 10px;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.button-conteiner {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
-.content__button__encrypt,
-.content__button__decrypt,
-.content__button__copy {
+.button-encrypt,
+.button-decrypt,
+.button-copy {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -62,26 +76,14 @@ body {
   transition: background-color 0.3s;
 }
 
-.content__button__encrypt:hover,
-.content__button__decrypt:hover,
-.content__button__copy:hover {
-  background-color: #45a049;
-}
-
-.content__text__output__conteiner {
-  display: flex;
-  flex-direction: column;
-}
-
-.content__text__output__title {
-  margin-bottom: 10px;
-  align-content: center;
-  text-align: center;
-  justify-content: center;
-}
-
-.content__button__copy {
+.button-copy {
   margin-top: 10px;
+}
+
+.button-encrypt:hover,
+.button-decrypt:hover,
+.button-copy:hover {
+  background-color: #45a049;
 }
 
 .baseboard {
@@ -89,12 +91,12 @@ body {
   margin-top: 20px;
 }
 
-.baseboard__link {
+.baseboard-link {
   color: #4caf50;
   text-decoration: none;
 }
 
-.baseboard__link:hover {
+.baseboard-link:hover {
   text-decoration: underline;
 }
 
@@ -103,18 +105,19 @@ body {
     padding: 10px;
   }
 
-  .content__text__input, .content__text__output__text__area {
+  .text-input,
+  .text-output {
     height: 150px;
     font-size: 1rem;
   }
 
-  .content__buttons {
+  .button-conteiner {
     flex-direction: column;
   }
 
-  .content__button__encrypt,
-  .content__button__decrypt,
-  .content__button__copy {
+  .button-encrypt,
+  .button-decrypt,
+  .button-copy {
     margin-top: 10px;
   }
 }

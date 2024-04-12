@@ -1,23 +1,19 @@
 const KEY = 3;
-const buttonEncrypt = document.getElementsByClassName(
-  "content__button__encrypt"
-)[0];
-const buttonDecrypt = document.getElementsByClassName(
-  "content__button__decrypt"
-)[0];
-const buttonCopy = document.getElementsByClassName("content__button__copy")[0];
-const textareaMessage = document.getElementsByClassName(
-  "content__text__input"
-)[0];
-const outputTextContainer = document.getElementsByClassName(
-  "content__text__output__conteiner"
-)[0];
+
+const buttonEncrypt = document.querySelectorAll('button')[0];
+const buttonDecrypt = document.querySelectorAll('button')[1];
+const buttonCopy = document.querySelectorAll('button')[2];
+
+const textInput = document.querySelectorAll('textarea')[0];
+const textOutput = document.querySelectorAll('textarea')[1];
 
 function encryptMessage(message, key) {
   let encryptedMessage = "";
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
   for (let i = 0; i < message.length; i++) {
     const element = message[i].toLowerCase();
+
     if (alphabet.includes(element)) {
       const shiftedChar = shiftCharacter(element, key, alphabet);
       encryptedMessage += shiftedChar;
@@ -25,6 +21,7 @@ function encryptMessage(message, key) {
       encryptedMessage += element;
     }
   }
+
   return encryptedMessage;
 }
 
@@ -43,48 +40,43 @@ function decryptMessage(encryptedMessage, key) {
       decryptedMessage += char;
     }
   }
+  
   return decryptedMessage;
 }
 
 function shiftCharacter(char, shiftValue, alphabet) {
   const shiftedIndex = (alphabet.indexOf(char) + shiftValue) % alphabet.length;
+
   return alphabet[shiftedIndex];
 }
 
-buttonEncrypt.addEventListener("click", () => {
-  const message = textareaMessage.value;
+buttonEncrypt.addEventListener("click", (e) => {
+  e.preventDefault();
+  const message = textInput.value;
   const encryptedMessage = encryptMessage(message, KEY);
-  const copyButton = document.querySelector(".content__button__copy");
-  const outputMessage = outputTextContainer.querySelector(
-    ".content__text__output__text__area"
-  );
 
-  outputMessage.textContent = encryptedMessage;
+  textOutput.textContent = encryptedMessage;
   outputTitle.style.display = "none";
   buttonDecrypt.disabled = false;
-  copyButton.style.display = "block";
+  buttonCopy.style.display = "block";
 });
 
-buttonDecrypt.addEventListener("click", () => {
-  const message = outputTextContainer.querySelector(
-    ".content__text__output__text__area"
-  ).textContent;
+buttonDecrypt.addEventListener("click", (e) => {
+  e.preventDefault();
+  const message = textOutput.textContent;
   const decryptedMessage = decryptMessage(message, KEY);
 
-  const outputMessage = outputTextContainer.querySelector(
-    ".content__text__output__text__area"
-  );
-  outputMessage.textContent = decryptedMessage;
+  textOutput.textContent = decryptedMessage;
   buttonDecrypt.disabled = true;
 });
 
-buttonCopy.addEventListener("click", () => {
-  const message = outputTextContainer.querySelector(
-    ".content__text__output__text__area"
-  ).textContent;
+buttonCopy.addEventListener("click", (e) => {
+  e.preventDefault();
+  const message = textOutput.textContent;
+
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(message).then(
-      () => {
+    navigator.clipboard.writeText(message)
+    .then(() => {
         alert("Texto copiado com sucesso.");
       }
     );

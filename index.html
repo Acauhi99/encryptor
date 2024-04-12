@@ -7,40 +7,29 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- js -->
-    <script src="app.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main class="content">
-      <div class="content__text__input__conteiner">
-        <textarea
-          class="content__text__input"
-          id="inputText"
-          placeholder="Digite seu texto"
-        ></textarea>
-
-        <div class="content__buttons">
-          <button class="content__button__encrypt">Criptografar</button>
-          <button class="content__button__decrypt">Descriptografar</button>
+      <div class="text-input-conteiner">
+        <textarea class="text-input" id="inputText" placeholder="Digite seu texto"></textarea>
+        <div class="button-conteiner">
+          <button class="button-encrypt"> Criptografar </button>
+          <button class="button-decrypt"> Descriptografar </button>
         </div>
       </div>
 
-      <div class="content__text__output__conteiner" readonly>
-        <h2 class="content__text__output__title" id="outputTitle">
+      <div class="text-output-conteiner" readonly>
+        <h2 class="text-output-title" id="outputTitle">
           Nenhuma mensagem encontrada
         </h2>
-        <textarea
-          class="content__text__output__text__area"
-          id="outputText"
-          readonly
-        ></textarea>
-        <button class="content__button__copy" type="button">Copiar</button>
+        <textarea class="text-output" id="outputText" readonly></textarea>
+        <button class="button-copy" type="button"> Copiar </button>
       </div>
     </main>
     <footer class="baseboard">
       <p>
-        Made by -><a class="baseboard__link" href="https://github.com/Acauhi99"
-          >Acauhi</a
-        ><-
+        Made by -><a class="baseboard-link" href="https://github.com/Acauhi99"> Acauhi </a><-
       </p>
     </footer>
   </body>
