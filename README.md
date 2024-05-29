@@ -5,11 +5,3 @@ Encryptor é uma aplicação web básica desenvolvida para criptografar e descri
 ## Funcionalidades
 
 - **Criptografia e Descriptografia:** Os usuários podem inserir uma mensagem no campo de entrada e escolher entre criptografá-la ou descriptografá-la.
-
-## Contribuição
-
-Contribuições são bem-vindas! Se você tiver sugestões de melhorias, por favor, abra uma issue ou envie um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
