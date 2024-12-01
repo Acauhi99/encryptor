@@ -4,33 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de Mensagens</title>
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- js -->
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./dist/index.js" type="module" defer></script>
   </head>
   <body>
-    <main class="content">
-      <div class="text-input-conteiner">
-        <textarea class="text-input" id="inputText" placeholder="Digite seu texto"></textarea>
-        <div class="button-conteiner">
-          <button class="button-encrypt"> Criptografar </button>
-          <button class="button-decrypt"> Descriptografar </button>
-        </div>
-      </div>
-
-      <div class="text-output-conteiner" readonly>
-        <h2 class="text-output-title" id="outputTitle">
-          Nenhuma mensagem encontrada
-        </h2>
-        <textarea class="text-output" id="outputText" readonly></textarea>
-        <button class="button-copy" type="button"> Copiar </button>
-      </div>
-    </main>
-    <footer class="baseboard">
-      <p>
-        Made by -><a class="baseboard-link" href="https://github.com/Acauhi99"> Acauhi </a><-
-      </p>
-    </footer>
+    <div id="root"></div>
   </body>
 </html>
